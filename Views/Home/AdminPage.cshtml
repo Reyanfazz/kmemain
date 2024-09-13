@@ -1,0 +1,102 @@
+﻿@model kme.Models.Topics.TopicsModel
+
+@{
+    ViewData["Title"] = "AdminPage";
+}
+
+<p>@ViewBag.success</p>
+<div class="form__contai__ner_ek mt-4" enctype="multipart/form-data">
+    <h1 class="uploading_hed">Publishing Books</h1>
+    <form class="form__Ebok" asp-action="AdminPage" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="Name" class="form-title">Title</label>
+            <input asp-for="Name" class="form-control" required />
+            
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="EbookId" class="form-title">BookID</label>
+            <input asp-for="EbookId" class="form-control" required />
+           
+            <span asp-validation-for="EbookId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="EbookFileld" class="form-title">Upload Book</label>
+          <div class="EBoo__k">  <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                <input asp-for="EbookFileld" class="form-control" accept=" .docx, .pdf, .doc" required />
+            </div>
+            <span asp-validation-for="EbookFileld" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Timg" class="form-title">Upload Image</label>
+            <div class="EBoo__k">
+                <div class="file-icon"><i class="far fa-image"></i></div>
+            <input asp-for="Timg" class="form-control" accept="image/*" required /> </div>
+            <span asp-validation-for="Timg" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Yvideo" class="form-title">Upload Video</label>
+            <div class="EBoo__k">
+            <div class="file-icon"><i class="far fa-file-video"></i></div>
+                <input asp-for="Yvideo" class="form-control" accept="video/*" required />
+            </div>
+            
+            <span asp-validation-for="Yvideo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="AudioFileId" class="form-title">Upload Audio</label>
+            <div class="EBoo__k">
+            <div class="file-icon"><i class="fas fa-volume-up"></i></div>
+            <input asp-for="AudioFileId" class="form-control" accept="audio/*" required /></div>
+            
+            <span asp-validation-for="AudioFileId" class="text-danger"></span>
+        </div>
+
+     
+        <div class="form-group">
+            <label asp-for="TotalEbookParts" class="form-title">Total Book Parts</label>
+            <input asp-for="TotalEbookParts" class="form-control" required />
+            <span asp-validation-for="TotalEbookParts" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="TotalAudioFiles" class="form-title">Total Audio Parts</label>
+            <input asp-for="TotalAudioFiles" class="form-control" required />
+            <span asp-validation-for="TotalAudioFiles" class="text-danger"></span>
+        </div>
+
+     
+
+        <div class="form-group">
+            <label asp-for="EbCategory" class="form-title">Category</label>
+            <select asp-for="EbCategory" class="form-select" id="EbCategory" name="EbCategory">
+                <option value="choose">Choose category</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="books">Books</option>
+                <option value="sports">Sports</option>
+            </select>
+
+            <span asp-validation-for="EbCategory" class="text-danger"></span>
+        </div>
+        <div class="submit__buon">
+            <button type="submit" class="submit-buo-nn">
+                <span>Submit</span>
+                <i class="fas fa-check"></i>
+            </button>
+        </div>
+    </form>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6391432956388515"
+            crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/logged.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/loggedin.css" asp-append-version="true" />
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="hcon container-fluid">
+            <!-- Added container-fluid for full-width content -->
+            <div class="header-content">
+                <button class="openbtn-log" onclick="openNav()">☰ K.M.E</button>
+                <div class="custom-scroller">
+                    <div id="mySidepanel-log" class="side-panel-log">
+                        <a href="javascript:void(0)" class="closebtn-log" onclick="closeNav()">☰</a>
+                        <!-- home section -->
+                        <a href="/Home/Index"><i class="fa fa-fw fa-home"></i>Home</a>
+                        <a href="/Home/Search"><i class="fa fa-fw fa-search"></i>Search </a>
+                        <!-- About section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('about')"> Topics <i class="fa fa-caret-down" style="color: white; margin-left: 45px; "></i></a>
+
+
+                        <ul id="about-submenu" class="dropdown-menu">
+                            <li><a href="/Home/TopicsGuest"><i class="fa fa-fw fa-minus"></i>Topics Guest</a></li>
+                            <li><a href="/Home/TopicsUser"><i class="fa fa-fw fa-minus"></i>Topics User</a></li>
+                            <li class="dropdown-item--nested">
+                                <a href="#" onclick="event.stopPropagation();">Paid Topic <i class="fa fa-caret-down ml-auto mr-0" style="color: white; margin-left: 45px;"></i></a>
+                                <ul class="nested">
+                                    <li><a href="#">Dropdown Item 1</a></li>
+                                    <li><a href="#">Dropdown Item 2</a></li>
+                                    <li><a href="#">Dropdown Item 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- Services section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('services')">Services <i class="fa fa-caret-down" style="color: white; margin-left: 45px; "></i></a>
+                        <ul id="services-submenu" class="dropdown-menu">
+                            <li><a href="#">Topic User</a></li>
+                            <li><a href="#">Guest User</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+
+
+                        <!-- clients section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('clients')">Clients </a>
+                        <ul id="clients-submenu" class="dropdown-menu">
+                            <li><a href="#">Topic User</a></li>
+                            <li><a href="#">Guest User</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+
+
+                        <!-- Services section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('services')">Services</a>
+                        <ul id="services-submenu" class="dropdown-menu">
+                            <li><a href="#">Topic User</a></li>
+                            <li><a href="#">Guest User</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+
+
+                        <!-- admin section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('admin')">Admin</a>
+                        <ul id="admin-submenu" class="dropdown-menu">
+                            <li><a href="/Home/AdminPage">admin ToUser</a></li>
+                            <li><a href="#">admin GUser</a></li>
+                            <li><a href="#">admin Docu</a></li>
+                        </ul>
+
+
+                        <!-- paid user section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('douc')">paid user</a>
+                        <ul id="douc-submenu" class="dropdown-menu">
+                            <li><a href="#">Topic User</a></li>
+                            <li><a href="#">Guest User</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+                        <!--contact-->
+                        <a href="#">Contact</a>
+                    </div>
+                </div>                           
+            </div>
+        </div>
+        <!-- User Profile Component -->
+        <div class="App__user">
+            <span class="App__username">@ViewBag.Username</span>
+            <div class="App__figure">
+                <img src="https://via.placeholder.com/40" alt="Person Image" class="img-fluid" />
+            </div>
+        </div>
+        @*<div class="App__user">
+            <form id="updateUserInfoForm">
+                <input type="hidden" id="userIdInput" value="USERID" />
+                <span class="App__username">
+                    <input type="text" id="usernameInput" value="Yourname" />
+                </span>
+                <div class="App__figure">
+                    <img src="https://via.placeholder.com/40" alt="Person Image" class="img-fluid" />
+                    <input type="file" id="profileImageInput" accept="image/*" style="display:none" />
+                    <button type="button" onclick="$('#profileImageInput').click()" title="Change Avatar">Change</button>
+                </div>
+            </form>
+        </div>*@
+    </header>
+
+
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <!--footer-->
+    <footer>
+        <div class="kme-footer-container">
+            <div class="kme-footer-item">
+                <img src="~/docu/image/logo.png" alt="Footer Image" class="kme-footer-image">
+                <p class="kme-footer-text">Copyright © 2023 </p>
+            </div>
+            <div class="kme-footer-item">
+                <ul>
+                    <li><a href="#">Acceptable Use</a></li>
+                    <li><a href="#">Changes to Terms of Use</a></li>
+                    <li><a href="#">Contacting Us</a></li>
+                </ul>
+            </div>
+            <div class="kme-footer-icons">
+                <div class="kme-footer-section-icon-container">
+                    <a href="#" class="text-white">  <i class="fab fa-twitter icon"></i></a>
+                </div>
+                <div class="kme-footer-section-icon-container">
+                    <a href="#" class="text-white"> <i class="fab fa-instagram icon"></i></a>
+                </div>
+                <div class="kme-footer-section-icon-container">
+                    <a href="#" class="text-white">  <i class="fab fa-linkedin icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+   @* <script>
+        $(document).ready(function () {
+            const userId = $("#userIdInput").val();
+
+            // Update username
+            $("#usernameInput").on('change keyup paste cut mouseleave', function () {
+                updateUsername($("#usernameInput"), userId);
+            });
+
+            // Change profile picture
+            $("#profileImageInput").on('change', function () {
+                readURL(this, ".App__figure > img");
+            });
+        });
+
+        /**
+         * Updates username associated with the provided userId.
+         * @param {jQuery Object} usernameField
+         * @param {string} userId
+         */
+        function updateUsername(usernameField, userId) {
+            $.ajax({
+                type: "PUT",
+                url: "/api/users/updateUsername",
+                headers: {
+                    Authorization: "Bearer YOURTOKEN", // Optional authentication token
+                },
+                data: JSON.stringify({
+                    "id": userId,
+                    "username": usernameField.val(),
+                }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                cache: false,
+                complete: function (data) {
+                    console.log(data);
+                    if (data && data.responseText === "Success") {
+                        usernameField.parent().find(".App__username").text(`${usernameField.val()} (${userId})`);
+                    } else {
+                        alert("Error occurred while trying to update the username.");
+                    }
+                },
+            });
+        }
+
+        /**
+         * Reads the local file (selected image) and applies it as a source to the provided selector.
+         * @param {Object} inputFileElement File input field.
+         * @param {String} targetSelector Target image tag selector.
+         */
+        function readURL(inputFileElement, targetSelector) {
+            if (inputFileElement.files && inputFileElement.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (event) {
+                    $(targetSelector).attr("src", event.target.result);
+                };
+
+                reader.readAsDataURL(inputFileElement.files[0]);
+
+                updateProfilePicture(userId, event.target.result);
+            }
+        }
+
+        /**
+         * Updates profile picture associated with the provided userId.
+         * @param {string} userId
+         * @param {string} base64EncodedImage
+         */
+        function updateProfilePicture(userId, base64EncodedImage) {
+            $.ajax({
+                type: "PUT",
+                url: "/api/users/updateProfilePicture",
+                headers: {
+                    Authorization: "Bearer YOURTOKEN", // Optional authentication token
+                },
+                data: JSON.stringify({
+                    "id": userId,
+                    "base64EncodedImage": base64EncodedImage,
+                }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                cache: false,
+                complete: function (data) {
+                    console.log(data);
+                    if (data && data.responseText === "Success") {
+                        // Handle success message or refresh the page
+                    } else {
+                        alert("Error occurred while trying to update the profile picture.");
+                    }
+                },
+            });
+        }
+    </script>*@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+﻿
+@{
+    ViewData["Title"] = "TopicsUser";
+}
+@*<div class="Topicuser">
+<div class="usercontainer">
+
+    <div class="video-box">
+        <h2>Audio Book</h2>
+        <video class="playersize" controls>
+            <source src="~/docu/topic video/c&f.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Enjoy this sample video with great content!</p>
+    </div>
+     <div class="adv"> 
+    <div class=" ads-box">
+        <h2>Advertising</h2>
+        <p>Check out our amazing offers and products!</p>
+        <!-- Add your advertising content here -->
+    </div>
+    </div>
+</div>
+<div class="at-box">
+    <div class="playlist-box">
+        <h2 class="">Playlist</h2>
+        <div class="audio-track">
+            <div class="audio-track__number">1</div>
+            <div class="audio-track__added"><i class="ion-checkmark-round added"></i></div>
+            <div class="audio-track__title">chapter 1</div>
+            <div class="audio-track__length">10:11</div>
+            <!-- audio and play button-->
+            <div>
+                <audio id="audio-file-1" src="~/docu/audio/Clothing and Fashion.mp3"></audio>
+
+                <button class="fass-1">  <i class="fas fa-volume-up"></i></button>
+                <button class="fass-2"><i class="fas fa-volume-up"> </i></button>
+
+            </div>
+
+            <div class="topicsuser-audio1">
+                <button class="fass-spk-1">
+                    <i class="fas fa-play"></i>
+                </button>
+               
+                <script>
+                    const audioFile = document.getElementById('audio-file-1');
+                    const playButton = document.querySelector('.fass-1');
+                    const pauseButton = document.querySelector('.fass-2');
+
+                    playButton.addEventListener('click', () => {
+                        audioFile.play();
+                        playButton.style.display = 'none';
+                        pauseButton.style.display = 'inline-block';
+                    });
+
+                    pauseButton.addEventListener('click', () => {
+                        audioFile.pause();
+                        playButton.style.display = 'inline-block';
+                        pauseButton.style.display = 'none';
+                    });
+
+                    audioFile.addEventListener('ended', () => {
+                        playButton.style.display = 'inline-block';
+                        pauseButton.style.display = 'none';
+                    });
+                </script>
+            </div>
+            <div class="audio-track__popularity"><i class="ion-arrow-graph-up-right"></i></div>
+        </div>
+        <!-- Add more tracks as needed -->
+       <div class="audio-track">
+            <div class="audio-track__number">2</div>
+            <div class="audio-track__added"><i class="ion-checkmark-round added"></i></div>
+            <div class="audio-track__title">chapter 2</div>
+            <div class="audio-track__length">5:11</div>
+            <!-- audio and play button-->
+            <div>         
+                <button class="fass-1">
+                    <i class="fas fa-volume-up"></i>
+            </button>
+            </div>
+            <div>
+                <button class="fass-spk-1">
+
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+
+        <div class="audio-track__popularity"><i class="ion-arrow-graph-up-right"></i></div>
+        </div>
+        <!-- Add more tracks as needed -->
+        <div class="audio-track">
+            <div class="audio-track__number">3</div>
+            <div class="audio-track__added"><i class="ion-checkmark-round added"></i></div>
+            <div class="audio-track__title">chapter 3</div>
+            <div class="audio-track__length">2:11</div>
+            <!-- audio and play button -->
+            <div>
+                <button class="fass-1">
+                <i class="fas fa-volume-up"></i>
+            </button>
+        </div>
+        <div>
+                <button class="fass-spk-1">
+
+                    <i class="fas fa-play" >
+                        
+                    </i>
+            </button>
+    </div>
+
+    <div class="audio-track__popularity"><i class="ion-arrow-graph-up-right"></i></div>
+        </div>
+    </div>
+
+    <div class="documents-box">
+        <span class="doc">
+        <h2 >Documents</h2>
+        <p>Explore detailed documents about our featured books.</p>
+        <ul>
+              <li>  <section>
+                    <h2>view down</h2>
+                    <iframe src="~/docu/pdf/notes1.pdf" width="auto" height="auto" frameborder="0"></iframe>
+                    </section>
+                </li>
+
+            <li><a href="~/" target="_blank">View more Document </a></li>
+            <!-- Add more documents or PDFs as needed -->
+        </ul>
+        </span>
+    </div>
+
+<div class="payment-box">
+    <h2>Payment</h2>
+    <p>Unlock the full content for just $30!</p>
+        <button>
+            <a href="~/Home/Payment">Buy Now</a>
+        </button>
+        <p>Get full access with subscription with access to content of numorous books for as little as 111 rs/month</p>
+        <button>
+            <a href="~/Home/Paymentplans">Subscription</a>
+        </button>
+</div>
+</div>
+</div> *@
+
+ <div class="tuser-media-container">
+        <!-- Section 1 -->
+        <div class="media-item v-media-item1" id="videoContent">
+            <div class="title">Video Content</div>
+        @*<video controls>
+            <source src="~/docu/topic video/c&f.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>*@
+        <iframe class="vdofra" src="https://www.youtube.com/embed/9DtcSCFwDdw?si=CtTYdjVbHO8YeL_6" title="YouTube video player" frameborder="0" ></iframe>
+          <p>Enjoy this sample video with great content!</p>
+        </div>
+
+        
+        <!-- Section 3 -->
+        <div class="media-item ads-media-item3">
+            <div class="title">Advertisement</div>
+            <!-- Your advertisement content goes here -->
+        <img src="https://static.toiimg.com/thumb/imgsize-23456,msid-107105857,width-300,resizemode-4/107105857.jpg" alt="Advertisement" style="width: 75%; border-radius: 8px;">
+        </div>
+
+    <!-- Section 2 -->
+    <div class="media-item AT-media-item2" id="audioTrack">
+        <div class="title">Audio Track</div>
+        <!-- Your audio track content goes here -->
+        <div class="loader">
+            <div class="song">
+                <p class="name">Time in a Bottle</p>
+                <p class="artist">Jim Corce</p>
+            </div>
+            <div class="albumcover"></div>
+            <div>
+                <audio id="audio-file-1" src="~/docu/audio/yaalo yaalo.mp3"> </audio>
+                <i class="songItemPlay fas fa-play-circle" id=""></i>
+            </div>
+        </div>
+        <div class="loader">
+            <div class="song">
+                <p class="name">My Way</p>
+                <p class="artist">Frank Sinatra</p>
+            </div>
+            <div class="albumcover"></div>
+            <div class="play"> </div>
+            <div>
+                <audio id="audio-file-2" src="~/docu/audio/Clothing and Fashion.mp3"> </audio>
+                <i class="songItemPlay fas fa-play-circle" id=""></i>
+            </div>
+        </div>
+        @*<div class="loader">
+            <div class="song">
+                <p class="name">Lemon Tree</p>
+                <p class="artist">Fools Garden</p>
+            </div>
+            <div class="albumcover"></div>
+            <div class="play"></div>
+        </div>
+    </div>*@
+
+        <div class="loader">
+            <div class="song">
+                <p class="name">My Way</p>
+                <p class="artist">Frank Sinatra</p>
+            </div>
+            <div class="albumcover"></div>
+            <div class="play"> </div>
+            <div>
+                <audio id="audio-file-3" src="~/docu/audio/yaalo yaalo.mp3"> </audio>
+                <i class="songItemPlay fas fa-play-circle" id=""></i>
+            </div>
+        </div>
+
+       </div>
+
+
+        <!-- Section 4 -->
+        <div class="media-item dou-media-item4">
+            <div class="title">Documents</div>
+            <!-- Your document links go here -->
+           @* <a href="document1.pdf" target="_blank">Document 1</a><br>
+        <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">example</a>
+        <object data="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf" type="application/pdf" width="100%" height="500px">
+            <p>Unable to display PDF file. <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">Download</a> instead.</p>
+        </object>*@
+        <!-- <ul>
+      <li>  <section>
+            <h2>view down</h2>
+            <iframe src="~/docu/pdf/notes1.pdf" width="auto" height="auto" frameborder="0"></iframe>
+            </section>
+        </li>
+
+    
+</ul>-->
+        <a href="~/Home/Docupages" target="_blank">View more Document </a>
+            <!-- Add more documents or PDFs as needed -->
+        </div>
+
+        <!-- Section 5 -->
+        <div class="media-item pay-media-item5">
+            <div class="title">Payment Options</div>
+            <div class="options">
+                <p>Unlock the full content for just $30!</p>
+     <button>
+         <a href="~/Home/Payment">Buy Now</a>
+     </button>
+     <p>Get full access with subscription with access to content of numorous books for as little as 111 rs/month</p>
+     <button>
+         <a href="~/Home/Paymentplans">Subscription</a>
+     </button>
+              
+            </div>
+        </div>
+    </div>
+
+ 
+<script>
+    const audioItems = document.querySelectorAll("#audioTrack .loader");
+    const audioElements = document.querySelectorAll("#audioTrack audio");
+
+    audioItems.forEach((audioItem, index) => {
+        const audioEl = audioItem.querySelector("audio");
+        const playBtn = audioItem.querySelector(".songItemPlay");
+
+        playBtn.addEventListener("click", () => {
+            audioElements.forEach((aud) => {
+                if (aud !== audioEl) {
+                    aud.pause();
+                    aud.currentTime = 0;
+                }
+            });
+
+            if (audioEl.paused) {
+                audioEl.play();
+                playBtn.classList.remove("fa-play-circle");
+                playBtn.classList.add("fa-pause-circle");
+            } else {
+                audioEl.pause();
+                playBtn.classList.remove("fa-pause-circle");
+                playBtn.classList.add("fa-play-circle");
+            }
+        });
+    });
+</script>
+
+<script src="~/js/topicsuser.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3l/jxb6oJ+m2c7gMzjJbMZZdMZBPpJ+Fu" crossorigin="anonymous">
+
+
+
+@* <script>
+        const audioFile = document.getElementById('audio-file');
+        const playPauseButton = document.querySelector('.play-pause');
+
+        function togglePlayPause() {
+            if (audioFile.paused) {
+                audioFile.play();
+                playPauseButton.classList.add('pause');
+                playPauseButton.classList.remove('play');
+            } else {
+                audioFile.pause();
+                playPauseButton.classList.add('play');
+                playPauseButton.classList.remove('pause');
+            }
+        }
+
+        audioFile.addEventListener('ended', () => {
+            playPauseButton.classList.remove('pause');
+            playPauseButton.classList.add('play');
+        });
+
+    </script>*@
+
+@* <script>
+
+    const audioFile = document.getElementById('audio-file');
+    const playPauseButton = document.querySelector('.play-pause');
+
+    function togglePlayPause() {
+        if (audioFile.paused) {
+            audioFile.play();
+            playPauseButton.classList.remove('play');
+            playPauseButton.classList.add('pause');
+        } else {
+            audioFile.pause();
+            playPauseButton.classList.remove('pause');
+            playPauseButton.classList.add('play');
+        }
+    }
+
+    playPauseButton.addEventListener('click', togglePlayPause);
+
+    audioFile.addEventListener('ended', () => {
+        playPauseButton.classList.remove('pause');
+        playPauseButton.classList.add('play');
+    });
+
+
+        </script> *@

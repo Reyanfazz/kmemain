@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+   
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Topic.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/TopicsGuest.css" asp-append-version="true" />
+
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="sticky-top">
+       
+            <!-- Added container-fluid for full-width content -->
+        <div>
+           
+            <a  href="@Url.Action("Index", "Home")"> <img src="~/docu/image/logo.png" text="User"class="kme-logotop"/>KME</a>
+       
+        </div>
+
+        </header>
+    <div>
+        @RenderBody()
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="kme-footer-container">
+            <div class="kme-footer-item">
+                <img src="~/docu/image/logo.png" alt="Footer Image" class="kme-footer-image">
+                <p class="kme-footer-text">Copyright © 2023 </p>
+            </div>
+            <div class="kme-footer-item">
+                <ul>
+                    <li><a href="#">Acceptable Use</a></li>
+                    <li><a href="#">Changes to Terms of Use</a></li>
+                    <li><a href="#">Contacting Us</a></li>
+                </ul>
+            </div>
+            <div class="kme-footer-icons">
+                <div class="kme-footer-section-icon-container">
+                <a href="#" class="text-white">  <i class="fab fa-twitter icon"></i></a>
+            </div>
+            <div class="kme-footer-section-icon-container">
+                <a href="#" class="text-white"> <i class="fab fa-instagram icon"></i></a>
+            </div>
+            <div class="kme-footer-section-icon-container">
+                <a href="#" class="text-white">  <i class="fab fa-linkedin icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

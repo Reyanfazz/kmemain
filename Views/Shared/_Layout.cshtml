@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6391432956388515"
+            crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - KME</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Search.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/SignUp.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/adminPage.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Topic.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/TopicsUser.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/TopicsGuest.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Payment.css" asp-append-version="true" />
+
+
+
+</head>
+<body>
+    <!--header-->
+    <header class="sticky-top">
+        <div class="hcon container-fluid">
+            <!-- Added container-fluid for full-width content -->
+            <div class="header-content">
+                <button class="openbtn-log" onclick="openNav()">☰ K.M.E</button>
+                <div class="custom-scroller">
+                    <div id="mySidepanel-log" class="side-panel-log">
+                        <a href="javascript:void(0)" class="closebtn-log" onclick="closeNav()">☰</a>
+                        <!-- home section -->
+                        <a href="/Home/Index"><i class="fa fa-fw fa-home"></i>Home</a>
+                        <a href="/Home/Search"><i class="fa fa-fw fa-search"></i>Search </a>
+                        <!-- About section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('about')"> Topics <i class="fa fa-caret-down" style="color: white; margin-left: 45px; "></i></a>
+
+
+                        <ul id="about-submenu" class="dropdown-menu">
+                            <li><a href="/Home/TopicsGuest"><i class="fa fa-fw fa-minus"></i>Topics Guest</a></li>
+                            <li><a href="/Home/TopicsUser"><i class="fa fa-fw fa-minus"></i>Topics User</a></li>
+                            <li class="dropdown-item--nested">
+                                <a href="#" onclick="event.stopPropagation();">Paid Topic <i class="fa fa-caret-down ml-auto mr-0" style="color: white; margin-left: 45px;"></i></a>
+                                <ul class="nested">
+                                    <li><a href="#">Dropdown Item 1</a></li>
+                                    <li><a href="#">Dropdown Item 2</a></li>
+                                    <li><a href="#">Dropdown Item 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- Services section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('services')">Services <i class="fa fa-caret-down" style="color: white; margin-left: 45px; "></i></a>
+                        <ul id="services-submenu" class="dropdown-menu">
+                            <li><a href="#">Topic User</a></li>
+                            <li><a href="#">Guest User</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+
+
+                        <!-- clients section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('clients')">Clients </a>
+                        <ul id="clients-submenu" class="dropdown-menu">
+                            <li><a href="#">Topic User</a></li>
+                            <li><a href="#">Guest User</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+
+
+                        <!-- Services section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('services')">Services</a>
+                        <ul id="services-submenu" class="dropdown-menu">
+                            <li><a href="#">Topic User</a></li>
+                            <li><a href="#">Guest User</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+
+
+                        <!-- admin section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('admin')">Admin</a>
+                        <ul id="admin-submenu" class="dropdown-menu">
+                            <li><a href="/Home/AdminPage">admin ToUser</a></li>
+                            <li><a href="#">admin GUser</a></li>
+                            <li><a href="#">admin Docu</a></li>
+                        </ul>
+
+
+                        <!-- paid user section -->
+                        <a href="#" class="has-submenu" onclick="toggleSubMenu('douc')">paid user</a>
+                        <ul id="douc-submenu" class="dropdown-menu">
+                            <li><a href="#">Topic User</a></li>
+                            <li><a href="#">Guest User</a></li>
+                            <li><a href="#">Documents</a></li>
+                        </ul>
+                        <!--contact-->
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+
+                <div class="float-lg-end">
+
+                    <button type="button">@Html.ActionLink("SignUp", "SignUp")</button>
+                    <button type="button">@Html.ActionLink("Login", "Login")</button>
+                </div>
+               
+            </div>
+            </div>
+        
+
+    </header>
+
+    @* <div class="container">
+        <aside class="sidenav">
+           <i class="fa fa-home">@Html.ActionLink("Home", "Index")</i>
+            <i class="fa fa-search">@Html.ActionLink("Search", "Search")</i>
+             <i class="fa fa-dropbox">@Html.ActionLink("Topics", "Topics")</i> 
+            <i class="fa fa-dropbox">@Html.ActionLink("Admin", "AdminPage")</i>
+           
+           
+        </aside>
+        <aside class="sidena">
+            <a href="#"><i class="fa fa-address-book"></i> your library</a>
+
+        </aside>
+    </div> *@
+
+
+
+        <div class="text-center text-md-left">
+
+            <main role="main">
+                @RenderBody()
+            </main>
+
+
+        </div>
+
+  
+
+
+
+    <!--footer-->
+    <footer>
+        <div class="kme-footer-container">
+            <div class="kme-footer-item">
+                <img src="~/docu/image/logo.png" alt="Footer Image" class="kme-footer-image">
+                <p class="kme-footer-text">Copyright © 2023 </p>
+            </div>
+            <div class="kme-footer-item">
+                <ul>
+                    <li><a href="#">Acceptable Use</a></li>
+                    <li><a href="#">Changes to Terms of Use</a></li>
+                    <li><a href="#">Contacting Us</a></li>
+                </ul>
+            </div>
+            <div class="kme-footer-icons">
+                <div class="kme-footer-section-icon-container">
+                    <a href="#" class="text-white">  <i class="fab fa-twitter icon"></i></a>
+                </div>
+                <div class="kme-footer-section-icon-container">
+                    <a href="#" class="text-white"> <i class="fab fa-instagram icon"></i></a>
+                </div>
+                <div class="kme-footer-section-icon-container">
+                    <a href="#" class="text-white">  <i class="fab fa-linkedin icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

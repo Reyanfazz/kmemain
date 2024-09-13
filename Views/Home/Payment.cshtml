@@ -1,0 +1,111 @@
+﻿@{
+    ViewData["Title"] = "Payment";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Your HTML content here -->
+    <div class="paycontainer">
+        <h1 class="text-center">Select Payment Method</h1>
+
+        <!-- Paytm-Section -->
+        <div class="mb-3">
+            <input type="radio" name="paymentMethod" id="paytmRadio" class="form-check-input">
+            <label for="paytmRadio" class="form-check-label">UPI ID</label>
+            <div class="payment-section" id="paytmSection">
+                <!-- Paytm Payment Form Elements Here -->
+                <input type="text" class="form-control mb-2" placeholder="Enter UPI ID">
+                     <button class="custom-btn">Verify</button>
+            </div>
+        </div>
+
+        <!-- Credit Card Section -->
+        <div class="mb-3">
+            <input type="radio" name="paymentMethod" id="creditCardRadio" class="form-check-input">
+            <label for="creditCardRadio" class="form-check-label">Credit Card</label>
+            <div class="payment-section" id="creditCardSection">
+                <!-- Credit Card Payment Form Elements Here -->
+                <div class="card">
+                    <div class="card-header p-0">
+                        <h2 class="mb-0">
+                        <span class="custom1-button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="custom-flex-container">
+                                <span>Credit card</span>
+                                    <div class="icons">
+                                        <img src="https://i.imgur.com/2ISgYja.png" width="20">
+                                        <img src="https://i.imgur.com/W1vtnOV.png" width="20">
+                                        <img src="https://i.imgur.com/35tC99g.png" width="20">
+                                        <img src="https://i.imgur.com/2ISgYja.png" width="20">
+                                    </div>
+                                </div>
+                            </span>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body payment-card-body">
+                            <span class="font-weight-normal card-text">Card Number</span>
+                            <div class="input">
+                                <i class="fa fa-credit-card"></i>
+                                <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col-md-6">
+                                    <span class="font-weight-normal card-text">Expiry Date</span>
+                                    <div class="input">
+                                        <i class="fa fa-calendar"></i>
+                                        <input type="text" class="form-control" placeholder="MM/YY">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="font-weight-normal card-text">CVC/CVV</span>
+                                    <div class="input">
+                                        <i class="fa fa-lock"></i>
+                                        <input type="text" class="form-control" placeholder="000">
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured with ssl certificate</span>
+                        </div>
+                    <button class="custom-btn">Submit</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Net Banking Section -->
+        <div class="mb-3">
+            <input type="radio" name="paymentMethod" id="netBankingRadio" class="form-check-input">
+            <label for="netBankingRadio" class="form-check-label">Net Banking</label>
+            <div class="payment-section" id="netBankingSection">
+                <!-- Net Banking Payment Form Elements Here -->
+                <input type="text" class="form-control mb-2" placeholder="Net Banking Information">
+                <!-- Additional Net Banking Fields Here -->
+            </div>
+        </div>
+    </div>
+    <div class="order-summary1">
+    <h1>Order Summary</h1>
+
+    <div class="order-item1">
+        <span>Product 1</span>
+        <span>$20.00</span>
+    </div>
+
+    <div class="order-item2">
+        <span>Product 2</span>
+        <span>$15.00</span>
+    </div>
+
+    <div class="total1">
+        Total: $40.00
+    </div>
+
+    <a href="#" class="payment-button1">Proceed to Payment</a>
+</div>
+
+
+<script src="~/js/payment.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,44 @@
+﻿@model kme.Models.Users.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row">
+    <div class="center-content">
+        <form asp-action="Login" class="form">
+            <p class="title">Login</p>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <label asp-for="Email">
+                <input asp-for="Email" class="input" type="email" placeholder=" " required="">
+                <span>Email</span>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </label>
+
+            <label asp-for="Password">
+                <input asp-for="Password" placeholder=" " type="password" required="" class="input" />
+                <span>Password</span>
+                <span asp-validation-for="Password" class="text-danger"></span>
+                
+            </label>
+            
+             <p class="forgetlink">
+                <span class="forgetlabel">Forgot Password?</span>
+            </p>
+                <button class=" form-btn">Login</button>
+            <p class="admin-login-label">If you are a creator <a class="admin-login-link" href="~/Home/Adminloggin">Admin</a></p>
+            <p class="sign-up-label">Don't have an account yet? <a class="sign-up-link" href="~/Home/SignUp">Signup</a></p>
+    </form>
+
+    @if (ViewData["message"] != null)
+    {
+        <p>@ViewData["message"]</p>
+    }
+</div>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

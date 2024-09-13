@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewData["Title"] = "loggedin";
+    Layout = "~/Views/Shared/_Layout_logged.cshtml";
+}
+
+
+<main class="img-container-3">
+    <div class="titlebackground">
+        <h1>Browse All</h1>
+
+        <!-- Related Artists -->
+        <div role="tabpanel" class="tab-pane" id="related-artists">
+
+            <div class="media-cards">
+
+                <div class="media-card">
+
+                    <div class="media-card__image" style="background-image: url(https://image.freepik.com/free-vector/religion-people-set-men-women-different-religious-confessions-traditional-clothes-illustrations_178650-3009.jpg);">
+
+                        <i class="ion-ios-play"></i>
+
+                    </div>
+                    <div>
+                        <audio id="audio-file" src="~/docu/audio/Clothing and Fashion.mp3"></audio>
+                        <i class="songItemPlay fas fa-play-circle" id="0"></i>
+                    </div>
+                    <a class="media-card__footer" href="~/Home/TopicsUser">
+                        Clothing Fashion
+                    </a>
+
+                </div>
+
+                <div class="media-card">
+
+                    <a href="~/home/paymentplans" class="media-card__image" style="background-image: url(https://thumbs.dreamstime.com/b/cover-page-science-education-icons-world-evolution-cover-page-science-education-icons-world-evolution-vector-110793644.jpg);">
+
+                        <i class="ion-ios-play"></i>
+
+                    </a>
+                    <div>
+                        <audio id="audio-file" src="~/docu/audio/yaalo yaalo.mp3"></audio>
+                        <i class="songItemPlay fas fa-play-circle" id="0"></i>
+                    </div>
+                    <a class="media-card__footer">Science</a>
+
+                </div>
+
+                <div class="media-card">
+
+                    <div class="media-card__image" style="background-image: url(data:image/jpeg;base64,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);">
+
+                        <i class="ion-ios-play"></i>
+
+                    </div>
+                    <div>
+                        <audio id="audio-file" src="~/docu/audio/"></audio>
+                        <i class="songItemPlay fas fa-play-circle" id="0"></i>
+                    </div>
+
+                    <a class="media-card__footer">Law</a>
+
+                </div>
+
+                <div class="media-card">
+
+                    <div class="media-card__image" style="background-image: url(https://img.freepik.com/free-photo/3d-internet-secuirty-badge_1048-18107.jpg?w=740&t=st=1701344626~exp=1701345226~hmac=9eb3cb0c966c05ee81b23b36ab618f88f288ff1909618a9bb1b6c4f2e1d8a226);">
+
+                        <i class="ion-ios-play"></i>
+
+                    </div>
+                    <div>
+                        <audio id="audio-file" src="~/docu/audio/yaalo yaalo.mp3"></audio>
+                        <i class="songItemPlay fas fa-play-circle" id="0"></i>
+                    </div>
+
+                    <a class="media-card__footer">Defense & Security</a>
+
+                </div>
+
+                <div class="media-card">
+
+                    <div class="media-card__image" style="background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5795fc37-6574-4f88-95f9-669f4f68bfc5/d2okzh9-97cae4a5-4419-41ce-bc1e-5ce8e8a00858.jpg/v1/fit/w_828,h_1072,q_70,strp/nature_study_project___cover_by_strawberry_ninja_d2okzh9-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE2NiIsInBhdGgiOiJcL2ZcLzU3OTVmYzM3LTY1NzQtNGY4OC05NWY5LTY2OWY0ZjY4YmZjNVwvZDJva3poOS05N2NhZTRhNS00NDE5LTQxY2UtYmMxZS01Y2U4ZThhMDA4NTguanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.O-xSbnFBs0F2HKSL3ly7yYjJxS1uEE1dCJ3xta-ypWo);">
+
+                        <i class="ion-ios-play"></i>
+
+                    </div>
+                    <div>
+                        <audio id="audio-file" src="~/docu/audio/p3"></audio>
+                        <i class="songItemPlay fas fa-play-circle" id="0"></i>
+                    </div>
+                    <a class="media-card__footer">Study Of Entertainment</a>
+
+                </div>
+
+                <div class="media-card">
+
+                    <div class="media-card__image" style="background-image: url(https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1408482473i/22909866.jpg  );">
+
+                        <i class="ion-ios-play"></i>
+
+                    </div>
+                    <div>
+                        <audio id="audio-file" src="~/docu/audio/"></audio>
+                        <i class="songItemPlay fas fa-play-circle" id="0"></i>
+                    </div>
+
+                    <a class="media-card__footer">Effective Communication</a>
+
+                </div>
+
+                <div class="media-card">
+
+                    <div class="media-card__image" style="background-image: url(https://cdn.vectorstock.com/i/1000x1000/68/83/cover-for-a-school-notebook-or-history-book-vector-31886883.webp);">
+
+                        <i class="ion-ios-play"></i>
+
+                    </div>
+                    <div>
+                        <audio id="audio-file" src="~/docu/audio/"></audio>
+                        <i class="songItemPlay fas fa-play-circle" id="0"></i>
+                    </div>
+
+                    <a class="media-card__footer">History</a>
+
+                </div>
+
+                <div class="media-card">
+
+                    <div class="media-card__image" style="background-image: url(https://c4.wallpaperflare.com/wallpaper/349/850/468/politics-war-king-illuminati-wallpaper-preview.jpg);">
+
+                        <i class="ion-ios-play"></i>
+
+                    </div>
+                    <div>
+                        <audio id="audio-file" src="~/docu/audio/"></audio>
+                        <i class="songItemPlay fas fa-play-circle" id="0"></i>
+                    </div>
+
+                    <a class="media-card__footer">Politics</a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- / -->
+        </div>
+
+
+
+</main>
+<script src="~/js/loggedin.js" asp-append-version="true"></script>
